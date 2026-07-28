@@ -1,7 +1,7 @@
+import AppRoutes from "./routes/AppRoutes";
+
 function App() {
-  return (
-    <h1>Smart Library Frontend</h1>
-  );
+  return <AppRoutes />;
 }
 
 export default App;
