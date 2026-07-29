@@ -1,8 +1,12 @@
+import SearchBar from "../../components/books/SearchBar";
+
 function Books() {
   return (
-    <h1 className="text-5xl text-center mt-20">
-      Books Page
-    </h1>
+    <>
+      <SearchBar />
+
+      {/* BookGrid will be added here next */}
+    </>
   );
 }
 

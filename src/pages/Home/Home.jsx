@@ -1,8 +1,19 @@
+import Hero from "./Hero";
+import Features from "./Features";
+import Statistics from "./Statistics";
+import Testimonials from "./Testimonials";
+import BookSection from "../../components/books/BookSection";
+
+
 function Home() {
   return (
-    <h1 className="text-5xl text-center mt-20">
-      Home Page
-    </h1>
+    <>
+      <Hero />
+        <Features />
+         <Statistics />
+          <BookSection />
+           <Testimonials />
+    </>
   );
 }
 

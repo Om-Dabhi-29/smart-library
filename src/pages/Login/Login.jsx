@@ -1,8 +1,10 @@
+import LoginForm from "./LoginForm";
+
 function Login() {
   return (
-    <h1 className="text-5xl text-center mt-20">
-      Login Page
-    </h1>
+    <div className="min-h-screen bg-gray-100 flex items-center justify-center px-4">
+      <LoginForm />
+    </div>
   );
 }
 
