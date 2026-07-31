@@ -1,10 +1,12 @@
-function SearchBar() {
+function SearchBar({ search, setSearch }) {
   return (
-    <div className="max-w-7xl mx-auto px-6 py-6">
+    <div className="mb-6">
       <input
         type="text"
         placeholder="Search books..."
-        className="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-600"
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+        className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
       />
     </div>
   );
