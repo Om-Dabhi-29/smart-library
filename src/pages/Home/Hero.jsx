@@ -1,6 +1,6 @@
 function Hero() {
   return (
-    <section className="bg-gray-100">
+    <section className="bg-gradient-to-br from-blue-50 via-white to-purple-50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-8 py-20 flex items-center justify-between">
 
         {/* Left Side */}
@@ -8,7 +8,8 @@ function Hero() {
 
           <h1 className="text-6xl font-bold text-gray-900 leading-tight">
             Discover Your Next
-            <span className="text-blue-700"> Great Book</span>
+            <span className="text-blue-700"> Next </span>
+            Favorite Book 
           </h1>
 
           <p className="mt-6 text-lg text-gray-600">
@@ -19,11 +20,11 @@ function Hero() {
 
           <div className="mt-8 flex gap-5">
 
-            <button className="bg-blue-700 text-white px-6 py-3 rounded-xl hover:bg-blue-800 transition">
+            <button className="bg-blue-700 text-white px-6 py-3 rounded-full hover:bg-blue-800 transition">
               Explore Books
             </button>
 
-            <button className="border border-blue-700 text-blue-700 px-6 py-3 rounded-xl hover:bg-blue-700 hover:text-white transition">
+            <button className="border border-blue-700 text-blue-700 px-6 py-3 rounded-full hover:bg-blue-700 hover:text-white transition">
               Join Library
             </button>
 
@@ -38,7 +39,7 @@ function Hero() {
           <img
             src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=700"
             alt="Library"
-            className="w-[520px] rounded-3xl shadow-2xl"
+            className="w-[560px] rounded-3xl shadow-2xl hover:scale-105 transition duration-500"
           />
 
         </div>
