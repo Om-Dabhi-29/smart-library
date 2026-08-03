@@ -1,50 +1,52 @@
 import { FaStar } from "react-icons/fa";
 
 function Testimonials() {
-  const testimonials = [
+  const reviews = [
     {
-      id: 1,
       name: "Rahul Sharma",
       role: "Computer Science Student",
       review:
-        "The Smart Library makes borrowing books simple and fast. I can find everything I need in minutes.",
+        "Smart Library helped me find books for my semester in just a few minutes.",
     },
     {
-      id: 2,
       name: "Priya Patel",
       role: "Engineering Student",
       review:
-        "A clean interface and powerful search. It has completely changed how I use the college library.",
+        "The interface is simple, fast and makes borrowing books much easier.",
     },
     {
-      id: 3,
       name: "Amit Verma",
-      role: "Library Staff",
+      role: "Library Member",
       review:
-        "Managing books and tracking issued books has become much easier with this system.",
+        "I love the search feature and the clean design. It saves a lot of time.",
     },
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6">
 
-        <h2 className="text-4xl font-bold text-center">
-          What Our Users Say
-        </h2>
+        <div className="text-center mb-14">
 
-        <p className="text-center text-gray-600 mt-4 mb-12">
-          Trusted by students and librarians.
-        </p>
+          <h2 className="text-4xl font-bold text-gray-900">
+            What Our Users Say
+          </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <p className="mt-4 text-gray-600">
+            Trusted by students and readers every day.
+          </p>
 
-          {testimonials.map((item) => (
+        </div>
+
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+          {reviews.map((review, index) => (
             <div
-              key={item.id}
-              className="bg-gray-50 p-8 rounded-2xl shadow hover:shadow-xl transition"
+              key={index}
+              className="bg-white rounded-3xl shadow-lg p-8 hover:-translate-y-2 transition duration-300"
             >
-              <div className="flex text-yellow-500 mb-4">
+
+              <div className="flex mb-4 text-yellow-500">
                 <FaStar />
                 <FaStar />
                 <FaStar />
@@ -52,18 +54,26 @@ function Testimonials() {
                 <FaStar />
               </div>
 
-              <p className="text-gray-600 italic">
-                "{item.review}"
+              <p className="text-gray-600 leading-7">
+                "{review.review}"
               </p>
 
-              <div className="mt-6">
-                <h3 className="font-bold text-lg">
-                  {item.name}
-                </h3>
+              <div className="mt-6 flex items-center gap-4">
 
-                <p className="text-gray-500">
-                  {item.role}
-                </p>
+                <div className="w-14 h-14 rounded-full bg-blue-700 text-white flex items-center justify-center text-xl font-bold">
+                  {review.name.charAt(0)}
+                </div>
+
+                <div>
+                  <h3 className="font-semibold text-gray-900">
+                    {review.name}
+                  </h3>
+
+                  <p className="text-sm text-gray-500">
+                    {review.role}
+                  </p>
+                </div>
+
               </div>
 
             </div>

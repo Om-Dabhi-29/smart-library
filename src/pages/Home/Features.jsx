@@ -1,79 +1,74 @@
-import { FaBook, FaSearch, FaUserGraduate, FaShieldAlt } from "react-icons/fa";
+import {
+  FaBookOpen,
+  FaSearch,
+  FaUsers,
+  FaMobileAlt,
+} from "react-icons/fa";
 
 function Features() {
+  const features = [
+    {
+      icon: <FaBookOpen size={35} />,
+      title: "10,000+ Books",
+      description:
+        "Explore thousands of books across programming, business, science and more.",
+    },
+    {
+      icon: <FaSearch size={35} />,
+      title: "Smart Search",
+      description:
+        "Find books instantly by title, author, category or keywords.",
+    },
+    {
+      icon: <FaUsers size={35} />,
+      title: "Student Friendly",
+      description:
+        "Easy borrowing, returning and reservation system for every student.",
+    },
+    {
+      icon: <FaMobileAlt size={35} />,
+      title: "Access Anywhere",
+      description:
+        "Use Smart Library on desktop, tablet and mobile devices.",
+    },
+  ];
+
   return (
-    <section className="py-20 bg-white">
+    <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6">
 
-        <h2 className="text-4xl font-bold text-center text-gray-900">
-          Why Choose Smart Library?
-        </h2>
+        <div className="text-center mb-16">
 
-        <p className="text-center text-gray-600 mt-4 mb-12">
-          Everything you need to manage books and reading in one place.
-        </p>
+          <h2 className="text-4xl font-bold text-gray-900">
+            Why Choose Smart Library?
+          </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <p className="mt-4 text-lg text-gray-600">
+            Everything you need to discover, borrow and manage books in one place.
+          </p>
 
-          {/* Card 1 */}
-          <div className="bg-gray-50 p-8 rounded-2xl shadow hover:shadow-xl transition">
+        </div>
 
-            <FaBook className="text-5xl text-blue-700 mb-5" />
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
 
-            <h3 className="text-2xl font-semibold mb-3">
-              Thousands of Books
-            </h3>
+          {features.map((feature, index) => (
+            <div
+              key={index}
+              className="rounded-3xl border border-gray-200 bg-white p-8 shadow-md transition duration-300 hover:-translate-y-2 hover:shadow-xl"
+            >
+              <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-100 text-blue-700">
+                {feature.icon}
+              </div>
 
-            <p className="text-gray-600">
-              Browse and manage a huge collection of books.
-            </p>
+              <h3 className="text-xl font-semibold text-gray-900">
+                {feature.title}
+              </h3>
 
-          </div>
-
-          {/* Card 2 */}
-          <div className="bg-gray-50 p-8 rounded-2xl shadow hover:shadow-xl transition">
-
-            <FaSearch className="text-5xl text-blue-700 mb-5" />
-
-            <h3 className="text-2xl font-semibold mb-3">
-              Fast Search
-            </h3>
-
-            <p className="text-gray-600">
-              Find books instantly using smart search.
-            </p>
-
-          </div>
-
-          {/* Card 3 */}
-          <div className="bg-gray-50 p-8 rounded-2xl shadow hover:shadow-xl transition">
-
-            <FaUserGraduate className="text-5xl text-blue-700 mb-5" />
-
-            <h3 className="text-2xl font-semibold mb-3">
-              Student Friendly
-            </h3>
-
-            <p className="text-gray-600">
-              Easy borrowing and returning for students.
-            </p>
-
-          </div>
-
-          {/* Card 4 */}
-          <div className="bg-gray-50 p-8 rounded-2xl shadow hover:shadow-xl transition">
-
-            <FaShieldAlt className="text-5xl text-blue-700 mb-5" />
-
-            <h3 className="text-2xl font-semibold mb-3">
-              Secure System
-            </h3>
-
-            <p className="text-gray-600">
-              Safe account and library management.
-            </p>
-
-          </div>
+              <p className="mt-4 text-gray-600 leading-7">
+                {feature.description}
+              </p>
+            </div>
+          ))}
 
         </div>
 
